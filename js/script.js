@@ -9,7 +9,7 @@ $(document).ready(() => {
         strings: ["Web Developer.","Software Engineer.","UI Designer.","Blockchain Developer.","Nature Lover."],
         typeSpeed:70,
         loop: true,
-        startDelay: 1000,
+        startDelay: 800,
         showCursor: false,
         shuffle: true
     });

@@ -53,3 +53,13 @@
 .titleMessage .heading .sub{
     font-size: 25px;
 }
+
+.section{
+    padding: 100px 0;
+}
+
+.aboutImage{
+    /* position: absolute; clip is available only if the position is absolute */
+    max-width: 100%;
+
+}
