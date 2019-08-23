@@ -1,3 +1,11 @@
+body{
+    margin: 0px;
+    font-size: 14px;
+    color: #333;
+    background-color: white;
+    letter-spacing: 1px;
+}
+
 .overlay {
 	width: 100%;
 	height: 100%;
@@ -61,5 +69,9 @@
 .aboutImage{
     /* position: absolute; clip is available only if the position is absolute */
     max-width: 100%;
+}
 
+.skills-section{
+    background-color: #e74c3c;
+    color: white;
 }
