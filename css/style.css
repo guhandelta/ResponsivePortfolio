@@ -106,3 +106,57 @@ body{
 .chart .percent:after{
     content: '%';
 }
+
+.squareItem{
+    margin-top: 30px;
+    position: relative;
+}
+
+.squareInnerContainer{
+    position: relative;
+    padding: 50px 15px 35px; /* top left-right bottom */
+    text-align: center;
+    border:2px solid #444;
+    border-top: none;    
+}
+
+
+.squareInnerContainer:before,
+.squareInnerContainer:after{
+    content: '';
+    top: 0px;
+    position: absolute;
+    width: 30%;
+    border-bottom: 2px solid #444;
+}
+
+.squareInnerContainer:before{
+    right: 0px;
+}
+.squareInnerContainer:after{
+    left: 0px;
+}
+
+.squareContent h2{
+    font-size: 56px;
+    margin-bottom: 10px;
+    font-weight: 400;
+    color: #e74c3c;
+}
+
+.squareContent h3{
+    font-size: 13px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.squareIcon{
+    position: absolute;
+    left: 50%;
+    top: -30px;
+    width: 40%; /*The lines are 30% each, so 30% + 40% + 30% = 100%*/
+    height: 60px;
+    font-size: 45px;
+    margin-left: -20%;
+    color: #444;
+}

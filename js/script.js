@@ -37,9 +37,12 @@ $(document).ready(() => {
     
 
     var skillsTopOffset =  $('.skills-section').offset().top; //offset gets the position horizontally and vertically, .top() gets the top position
+    var statsTopOffset =  $('.stats-section').offset().top; 
+    var countUpFinished = false;
 
     $(window).scroll(function(){ // The callback function gets executed, whenever the window is scrolled
 
+        
         if(window.pageYOffset > skillsTopOffset - $(window).height() + 200){
             // If the scroll position is greater than the pageYOffset => if the user has scrolled into the box
             // the +200 is to mentioned the JS engine to start the animation after scrolling down 200px in the box
@@ -55,7 +58,16 @@ $(document).ready(() => {
                 // }
             });
         }
+        if(!countUpFinished && window.pageYOffset > skillsTopOffset - $(window).height() + 200){
+            $('.counter').each(function(){
+                var element = $(this);
+                var endVal = parseInt(element.text());
+
+                element.countup(endVal);
+            });
+            countUpFinished = true; // Var to make sure the countup() is not called repeatedly when the user is currently on the stats section
+        }
     });
 
-
+    
 });
