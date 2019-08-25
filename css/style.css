@@ -68,6 +68,22 @@ body{
 .aboutImage{
     /* position: absolute; clip is available only if the position is absolute */
     max-width: 100%;
+    height: 400px;
+    width: 260px;
+    margin-left: 40%;
+    background-color: #e74c3c;
+    padding-bottom: 50px;
+}
+
+#aboutme{
+    background-color: #e74c3c;
+}
+
+#aboutme h4{
+    margin-left: 32%;
+    color: #fff;
+    font-size: 250%;
+    font-family: "Stencil std", fantasy;
 }
 
 .contact-section,
@@ -79,6 +95,14 @@ body{
 .skills{
     text-align: center;
     margin-left: 10px;
+}
+
+#about h2{
+    color: #e74c3c;
+    text-align: center;
+    padding-top: -50px;
+    padding-bottom: 70px;
+
 }
 
 .chart{
@@ -311,4 +335,16 @@ body{
     -ms-transform: scale(1.05, 1.05);
     -o-transform: scale(1.05, 1.05);
 
+}
+
+.copyrightsection{
+    background-color: #000;
+    color: #fff;
+    padding: 30px -5px;
+    height: 60px;
+    padding-top: 20px;
+}
+
+.copyrightsection p{
+    margin: 0;
 }
