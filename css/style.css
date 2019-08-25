@@ -65,18 +65,48 @@ body{
     padding: 100px 0;
 }
 
+#navigator{
+    background-color: #e74c3c;
+    color: #fff;
+    z-index: 100;
+    width: 100%;
+}
+
+#navigator li{
+    padding: 0 10px;
+}
+
+#navigator li a{
+    color: #fff;
+}
+
+.navbar-brand, 
+.navbar-brand:hover{
+    color: #fff;
+}
+
+.navbar-toggler-icon{
+    background: url('/icons/menu.png');
+    background-size: 100%;
+}
+
+.stickyNav #navigator{
+    position: fixed;
+    top: 0;
+}
+
 .aboutImage{
     /* position: absolute; clip is available only if the position is absolute */
     max-width: 100%;
     height: 400px;
     width: 260px;
-    margin-left: 40%;
-    background-color: #e74c3c;
+    /* margin-left: 40%; */
+    /* background-color: #e74c3c; */
     padding-bottom: 50px;
 }
 
 #aboutme{
-    background-color: #e74c3c;
+    background-color:  #fff;
 }
 
 #aboutme h4{
@@ -92,9 +122,18 @@ body{
     color: white;
 }
 
+.skillCarousel{
+    height: 300px;
+}
+
 .skills{
     text-align: center;
     margin-left: 10px;
+
+}
+
+.skills h2{
+    padding-top: -175px;
 }
 
 #about h2{
@@ -144,7 +183,6 @@ body{
     border:2px solid #444;
     border-top: none;    
 }
-
 
 .squareInnerContainer:before,
 .squareInnerContainer:after{
@@ -200,6 +238,10 @@ body{
     text-decoration: none;
     color: #e74c3c;
     background-color: #fff;
+}
+
+#portfolio  h2{
+    color: #e74c3c;
 }
 
 .filter{

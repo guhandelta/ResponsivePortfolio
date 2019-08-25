@@ -98,5 +98,39 @@ $(document).ready(() => {
         });
         return false; //Instructing the JS compiler not to do anthing else after the above chunk of code completes
     });
+
+    //  Scroll Navigation with NavBar links
+    $("#navigator li a").click(function(e){
+
+        e.preventDefault(); // instructing JS engine not to navigate to the element
+
+        var targetElement = $(this).attr("href");
+        var targetPosition = $(targetElement).offset().top; // creating a jQuery obj for an element with it's #id and getting its top offset
+        $("html, body").animate({ scrollTop: targetPosition - 50 }, "slow");
+        // Calling this fn() on html and the body tag - the -50 is an offset saying not to go there completely - animation speed => slow or--
+        //-- can specify in milli secs
+    });
+
+    //Sticky Nav Bar
+    const nav = $("#navigator");
+    const navTop = nav.offset().top; // The position of the navbar, right from the start
+
+    $(window).on("scroll", stickyNavigationBar); // Function that gets executed on page scroll
+
+    function stickyNavigationBar(){
+        
+        var body =  $("body");
+
+        if($(window).scrollTop() >= navTop){
+            // When the page is scrolled up, and the navBar becomes fixed, the height of the navBar is not taken into acc, as it's not there,--
+            //-- by the about section
+            body.css("padding-top", nav.outerHeight() + "px"); //nav.outerHeight() => height of the Navbar => To prevent the page jitter or jump
+            body.addClass("stickyNav"); // If scrolled downwards, below the NavBar
+        }
+        else{
+            body.css("padding-top", 0); //nav.outerHeight() => height of the Navbar
+            body.removeClass("stickyNav"); // If scrolled upwards, above the NavBar
+        }
+    }
     
 });
