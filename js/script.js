@@ -71,8 +71,9 @@ $(document).ready(() => {
 
     $("[data-fancybox]").fancybox();
 
+    // Isotope is called when the page loads
     $(".items").isotope({
-        filter: '*',
+        filter: '*', // Isotope is called with the 'all' filter, when the page loads
         animationOptions:{
             duration: 1500,
             easing: 'linear',
@@ -80,5 +81,22 @@ $(document).ready(() => {
         },
     });
 
+    $("#filters  a").click(function(){
+        $("#filters .current").removeClass("current");// find the element under the <ul id="filters"> with the class 'current' and remove it
+        $(this).addClass("current"); // add the class 'current' to the element on which the click event was called upon(this)
+
+        var selector = $(this).attr("data-filter");
+
+        // Isotope is called when the item is clicked
+        $(".items").isotope({
+            filter: selector, // Isotope is called for the data-filter value of the element that has been clicked
+            animationOptions:{
+                duration: 1500,
+                easing: 'linear',
+                queue: false
+            },
+        });
+        return false; //Instructing the JS compiler not to do anthing else after the above chunk of code completes
+    });
     
 });
