@@ -95,18 +95,55 @@ body{
     top: 0;
 }
 
-.aboutImage{
+.card-img-top{
     /* position: absolute; clip is available only if the position is absolute */
     max-width: 100%;
-    height: 400px;
-    width: 260px;
+    height: 75%;
+    width: 100%;
     /* margin-left: 40%; */
     /* background-color: #e74c3c; */
-    padding-bottom: 50px;
+    padding-bottom: 5px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.card-body h4{
+    text-align: center;
+    color: #e74c3c;
+    font-size: 20pt;
+}
+
+.card-body p{
+    text-align: center;
+    color: #e74c3c;
+    text-emphasis: ;
+}
+
+.profLinks{
+    display: inline-block;
+    padding-left: 90px;
+    color: #e74c3c;
+}
+
+.card{
+    border-radius: 25px;
+    border: 0.5px solid #e74c3c;
+}
+
+.github{
+    color: #000;
+}
+
+.linkedin{
+    color: #0077B5;
 }
 
 #aboutme{
     background-color:  #fff;
+}
+
+.gist{
+    font-size: 15pt;
 }
 
 #aboutme h4{
@@ -389,4 +426,8 @@ body{
 
 .copyrightsection p{
     margin: 0;
+}
+
+.expCard{
+
 }
