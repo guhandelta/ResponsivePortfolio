@@ -1,3 +1,24 @@
+$(window).on("load", function(){
+    $(".loader .inner").fadeOut(500, function(){
+        $(".loader").fadeOut(750);
+    });
+
+    // THe Idotope function is called here, just to prevent the image overlaping in the portfolio section, sometimes, while pageload
+
+    // Isotope is called when the page loads
+    $(".items").isotope({
+        filter: '*', // Isotope is called with the 'all' filter, when the page loads
+        animationOptions:{
+            duration: 1500,
+            easing: 'linear',
+            queue: false
+        },
+    });
+
+})
+
+
+
 $(document).ready(() => {
     $('#slides').superslides({
         animate: 'fade',
@@ -71,15 +92,6 @@ $(document).ready(() => {
 
     $("[data-fancybox]").fancybox();
 
-    // Isotope is called when the page loads
-    $(".items").isotope({
-        filter: '*', // Isotope is called with the 'all' filter, when the page loads
-        animationOptions:{
-            duration: 1500,
-            easing: 'linear',
-            queue: false
-        },
-    });
 
     $("#filters  a").click(function(){
         $("#filters .current").removeClass("current");// find the element under the <ul id="filters"> with the class 'current' and remove it
