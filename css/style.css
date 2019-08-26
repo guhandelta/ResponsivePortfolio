@@ -158,6 +158,20 @@ body{
     font-family: "Stencil std", fantasy;
 }
 
+.resume{
+    margin-top: -90px;
+    padding-bottom: 90px;
+    padding-left: 225px;
+}
+
+.resumebtn{
+    color: #fff;
+    background-color: #e74c3c;
+    height: 50px;
+    width: 255px;
+    text-align: center;
+}
+
 .contact-section,
 .skills-section{
     background-color: #e74c3c;
